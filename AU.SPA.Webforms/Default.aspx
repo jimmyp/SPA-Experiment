@@ -4,6 +4,7 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <div id="test"></div>
     <h2>
         Welcome to ASP.NET!
     </h2>
@@ -14,11 +15,20 @@
         You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
             title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
     </p>
-</asp:Content>
+    <a href="#" id="next">Next</a>
+    </asp:Content>
 <asp:Content runat="server" ID="ScriptContent" ContentPlaceHolderID="ScriptContent">
     <script type="text/javascript">
         $(function () {
-            alert("javascripts!");
+
+            $("#next").click(function () {
+                //Replace Content
+                $.get("Page1/json.aspx", function(data) {
+                    $(".main").html(data);
+                });
+                
+                //Rebind next link
+            });
         });
     </script>
 </asp:Content>
