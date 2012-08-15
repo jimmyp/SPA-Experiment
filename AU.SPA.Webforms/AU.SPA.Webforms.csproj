@@ -120,16 +120,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Page1\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Page1\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Page1\Json.aspx.cs">
       <DependentUpon>Json.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page1\Json.aspx.designer.cs">
       <DependentUpon>Json.aspx</DependentUpon>
@@ -155,6 +147,12 @@
     <None Include="App_Readme\Handlebarsjs_README.md" />
     <Content Include="packages.config" />
     <Content Include="Page1\Page1Content.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AU.SPA.MC\AU.SPA.MC.csproj">
+      <Project>{FE5A3D67-2E13-49F0-873C-C903B47344D5}</Project>
+      <Name>AU.SPA.MC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
