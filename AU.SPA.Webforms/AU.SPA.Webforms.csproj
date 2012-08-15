@@ -122,11 +122,13 @@
     </Compile>
     <Compile Include="Page1\Json.aspx.cs">
       <DependentUpon>Json.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page1\Json.aspx.designer.cs">
       <DependentUpon>Json.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\Navigation.js" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

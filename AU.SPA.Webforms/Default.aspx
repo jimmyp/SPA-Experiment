@@ -20,7 +20,7 @@
 <asp:Content runat="server" ID="ScriptContent" ContentPlaceHolderID="ScriptContent">
     <script type="text/javascript">
         $(function () {
-            setupClientSideNavigationBetween({linkElement : $("#next"), pageName : "Page1"});
+            navigation.setupClientSideNavigationBetween({ linkElement: $("#next"), pageName: "Page1" });
         });
         
         

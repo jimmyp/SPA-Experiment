@@ -7,7 +7,7 @@
     <script type="text/javascript">
         $(function () {
 
-            loadContent({ pageName: "Page1" });
+            navigation.loadContent({ pageName: "Page1" });
 
         });
     </script>
