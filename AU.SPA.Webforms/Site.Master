@@ -49,6 +49,34 @@
     </form>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery-1.4.1.js") %>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/handlebars.js")%>"></script>
+    <script type="text/javascript">
+        function replaceMainContent(url, template) {
+            $.get(url, function (json) {
+                var html = template(json);
+                $(".main").html(html);
+            });
+        }
+        function setupClientSideNavigationBetween(options) {
+            $.get(options.pageName + "/" + options.pageName + "Content.html", function (htmlTemplate) {
+
+                var template = Handlebars.compile(htmlTemplate);
+
+                options.linkElement.click(function () {
+                    replaceMainContent(options.pageName + "/json.aspx", template);
+                });
+            });
+        }
+        
+        function loadContent(options) {
+            $.get(options.pageName + "Content.html", function (htmlTemplate) {
+
+                var template = Handlebars.compile(htmlTemplate);
+                replaceMainContent("json.aspx", template);
+
+
+            });
+        }
+    </script>
     <asp:ContentPlaceHolder runat="server" ID="ScriptContent">
         
     </asp:ContentPlaceHolder>

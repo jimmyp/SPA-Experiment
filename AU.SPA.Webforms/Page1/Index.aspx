@@ -7,22 +7,8 @@
     <script type="text/javascript">
         $(function () {
 
-            var template;
-            $.get('<%:ResolveUrl("~/Page1/Page1Content.html")%>', function (data) {
-                
-                template = Handlebars.compile(data);
-                
-                //Replace Content
-                $.get('<%:ResolveUrl("~/Page1/json.aspx")%>', function (data) {
-                    var html = template(data);
-                    $(".main").html(html);
-                });
-                
-            });
+            loadContent({ pageName: "Page1" });
 
-            
-
-            //Rebind next link
         });
     </script>
 </asp:Content>
