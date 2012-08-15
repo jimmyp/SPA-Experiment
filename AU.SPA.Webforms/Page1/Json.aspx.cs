@@ -12,7 +12,7 @@ namespace AU.SPA.Webforms.Page1
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.Write("{ \"title\": \"My New Post\", \"body\": \"This is my first post!\" }");
-            //Response.ContentType = "application/json";
+            Response.ContentType = "application/json";
 
         }
     }
