@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AU.SPA.Webforms.Page1 {
+namespace AU.SPA.Webforms.Page2 {
     
     
     public partial class Json {

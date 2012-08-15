@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 
-namespace AU.SPA.Webforms.Page1
+namespace AU.SPA.Webforms.Page2
 {
     public partial class Json : Page
     {
@@ -10,6 +10,7 @@ namespace AU.SPA.Webforms.Page1
             Response.Write(@"{ 
                                 ""title"": ""My New Post"", 
                                 ""body\"": ""This is my first post!"",
+                                ""extraContent"": ""Some more content baby"",
                                 ""next"" : ""Page2""
                             }");
             Response.ContentType = "application/json";

@@ -58,6 +58,9 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Page1\Index.aspx" />
     <Content Include="Page1\Json.aspx" />
+    <Content Include="Page2\Index.aspx" />
+    <Content Include="Page2\Json.aspx" />
+    <Content Include="Page2\Page2Content.html" />
     <Content Include="Scripts\handlebars.js" />
     <Content Include="Scripts\handlebars.runtime.js" />
     <Content Include="Styles\Site.css" />
@@ -110,13 +113,6 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -125,6 +121,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page1\Json.aspx.designer.cs">
+      <DependentUpon>Json.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page2\Json.aspx.cs">
+      <DependentUpon>Json.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page2\Json.aspx.designer.cs">
       <DependentUpon>Json.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

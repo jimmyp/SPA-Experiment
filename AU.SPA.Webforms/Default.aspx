@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="AU.SPA.Webforms._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
@@ -19,10 +18,10 @@
 </asp:Content>
 <asp:Content runat="server" ID="ScriptContent" ContentPlaceHolderID="ScriptContent">
     <script type="text/javascript">
+        
         $(function () {
             navigation.setupClientSideNavigationBetween({ linkElement: $("#next"), pageName: "Page1" });
         });
-        
         
     </script>
 </asp:Content>
