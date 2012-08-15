@@ -18,15 +18,27 @@
     <a href="#" id="next">Next</a>
     </asp:Content>
 <asp:Content runat="server" ID="ScriptContent" ContentPlaceHolderID="ScriptContent">
+    <script id="page1Content" type="text/x-handlebars-template" >
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+    </script>
     <script type="text/javascript">
         $(function () {
 
             $("#next").click(function () {
                 //Replace Content
-                $.get("Page1/json.aspx", function(data) {
-                    $(".main").html(data);
+                $.get("Page1/json.aspx", function (data) {
+                    var context = jQuery.parseJSON(data);
+                    var source = $("#page1Content").html();
+                    var template = Handlebars.compile(source);
+                    var html = template(context);
+                    $(".main").html(html);
                 });
-                
+
                 //Rebind next link
             });
         });

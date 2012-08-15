@@ -57,6 +57,8 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Page1\Json.aspx" />
+    <Content Include="Scripts\handlebars.js" />
+    <Content Include="Scripts\handlebars.runtime.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -139,6 +141,12 @@
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Readme\Handlebarsjs_LICENSE" />
+    <None Include="App_Readme\Handlebarsjs_README.md" />
+    <Content Include="packages.config" />
+    <Content Include="Page1\Page1Content.html" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

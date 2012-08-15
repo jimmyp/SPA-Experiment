@@ -48,6 +48,7 @@
     </div>
     </form>
     <script type="text/javascript" src="Scripts/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="Scripts/handlebars.js"></script>
     <asp:ContentPlaceHolder runat="server" ID="ScriptContent">
         
     </asp:ContentPlaceHolder>
