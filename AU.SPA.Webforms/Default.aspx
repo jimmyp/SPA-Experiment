@@ -24,17 +24,17 @@
             var template;
             $.get("Page1/Page1Content.html", function(data) {
                 template = Handlebars.compile(data);
-            });
 
-            $("#next").click(function () {
-                
-                //Replace Content
-                $.get("Page1/json.aspx", function (data) {
-                    var html = template(data);
-                    $(".main").html(html);
+                $("#next").click(function () {
+
+                    //Replace Content
+                    $.get("Page1/json.aspx", function (data) {
+                        var html = template(data);
+                        $(".main").html(html);
+                    });
+
+                    //Rebind next link
                 });
-
-                //Rebind next link
             });
         });
     </script>
