@@ -18,9 +18,11 @@
 </asp:Content>
 <asp:Content runat="server" ID="ScriptContent" ContentPlaceHolderID="ScriptContent">
     <script type="text/javascript">
-        
+
         $(function () {
-            navigation.setupClientSideNavigationBetween({ linkElement: $("#next"), pageName: "Page1" });
+            navigation.setupClientSideNavigationBetween({ linkElement: $("#next"), pageName: "Page1", pageInit: function () {
+                navigation.setupClientSideNavigationBetween({ linkElement: $("#next"), pageName: "Page2", pageInit: function () { } });
+            }});
         });
         
     </script>
