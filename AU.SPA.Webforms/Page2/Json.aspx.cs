@@ -9,7 +9,7 @@ namespace AU.SPA.Webforms.Page2
         {
             Response.Write(@"{ 
                                 ""title"": ""My New Post"", 
-                                ""body\"": ""This is my first post!"",
+                                ""body"": ""This is my first post!"",
                                 ""extraContent"": ""Some more content baby"",
                                 ""next"" : ""Page2""
                             }");

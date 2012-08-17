@@ -9,8 +9,7 @@ namespace AU.SPA.Webforms.Page1
         {
             Response.Write(@"{ 
                                 ""title"": ""My New Post"", 
-                                ""body\"": ""This is my first post!"",
-                                ""next"" : ""Page2""
+                                ""body"": ""This is my first post!"",
                             }");
             Response.ContentType = "application/json";
 

@@ -1,0 +1,18 @@
+﻿CACHE MANIFEST
+# 2010-06-18:v3
+
+# Explicitly cached 'master entries'.
+CACHE:
+orphaned.html
+Page1/Page1Content.html
+Page2/Page2Content.html
+Styles/Site.css
+Scripts/handlebars.js
+Scripts/jquery-1.4.1.js
+Scripts/Navigation.js
+
+# static.html will be served if main.py is inaccessible
+# offline.jpg will be served in place of all images in images/large/
+# offline.html will be served in place of all other .html files
+FALLBACK:
+*.html /offline.htm
