@@ -1,0 +1,20 @@
+﻿CACHE MANIFEST
+# 2010-06-18:v18
+
+# Explicitly cached 'master entries'.
+CACHE:
+Page1/Page1Content.html
+Page2/Page2Content.html
+Styles/Site.css
+Scripts/handlebars.js
+Scripts/jquery-1.4.1.js
+Scripts/Navigation.js
+Page1/json.aspx  
+Page2/json.aspx
+
+NETWORK:
+WebResource.axd
+
+# offline.html will be served in place of all other .html files
+# FALLBACK:
+#*.html /offline.htm

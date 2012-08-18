@@ -152,6 +152,7 @@
     <None Include="App_Readme\Handlebarsjs_README.md" />
     <Content Include="packages.config" />
     <Content Include="Page1\Page1Content.html" />
+    <None Include="manifest.appcache" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AU.SPA.MC\AU.SPA.MC.csproj">
