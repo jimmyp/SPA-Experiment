@@ -13,7 +13,7 @@
     <RootNamespace>AU.SPA.Webforms</RootNamespace>
     <AssemblyName>AU.SPA.Webforms</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,6 +63,7 @@
     <Content Include="Page2\Page2Content.html" />
     <Content Include="Scripts\handlebars.js" />
     <Content Include="Scripts\handlebars.runtime.js" />
+    <Content Include="Scripts\zepto.min.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -170,7 +171,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2023</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/AU.SPA.Webforms</IISUrl>
+          <IISUrl>http://localhost:2023/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
