@@ -29,7 +29,8 @@
 
     var setupClientSideNavigationBetween = function (options) {
         var start = (new Date).getTime();
-        $.get(options.pageName + "/" + options.pageName + "Content.html", function (htmlTemplate) {
+        var contentUrl = "/" + options.pageName + "/" + options.pageName + "Content.html";
+        $.get(contentUrl, function (htmlTemplate) {
 
             var diff = (new Date).getTime() - start;
             $("#perflist").append("<li> Loaded html " + options.pageName + "Content.html" + "  in " + diff + "ms");
@@ -38,8 +39,8 @@
 
             options.linkElement.click(function (event) {
                 saveAllClientSideData();
-                replaceMainContent(options.pageName + "/json.aspx", template, options.pageInit);
-
+                replaceMainContent("/" + options.pageName + "/json.aspx", template, options.pageInit);
+                history.pushState(null, null, $(this).attr('href'));
                 return false;
             });
         });
@@ -47,7 +48,7 @@
 
     var loadContent = function (options) {
         var start = (new Date).getTime();
-        $.get(options.pageName + "Content.html", function (htmlTemplate) {
+        $.get("/" + options.pageName + "Content.html", function (htmlTemplate) {
             var diff = (new Date).getTime() - start;
             $("#perflist").append("<li> Loaded html " + options.pageName + "Content.html" + "  in " + diff + "ms");
 
@@ -59,6 +60,7 @@
 
     return {
         setupClientSideNavigationBetween: setupClientSideNavigationBetween,
-        loadContent: loadContent
+        loadContent: loadContent,
+        replaceMainContent: replaceMainContent
     };
 });

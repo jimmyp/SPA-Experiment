@@ -51,7 +51,12 @@
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/handlebars.js")%>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Navigation.js") %>"></script>
     <script type="text/javascript">
+
         var navigation = new Navigation();
+
+//        window.addEventListener("popstate", function (e) {
+//            navigation.replaceMainContent(location.pathname);
+//        });
     </script>
     <asp:ContentPlaceHolder runat="server" ID="ScriptContent">
         
