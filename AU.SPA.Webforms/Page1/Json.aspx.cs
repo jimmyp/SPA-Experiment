@@ -9,7 +9,6 @@ namespace AU.SPA.Webforms.Page1
         {
             if (Request.QueryString["version"] == "1")
             {
-
                 Response.Write(
                     @"{ 
                                 ""title"": ""My New Post"", 

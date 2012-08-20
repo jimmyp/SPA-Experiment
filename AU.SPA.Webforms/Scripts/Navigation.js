@@ -1,5 +1,14 @@
 ﻿var Navigation = (function () {
 
+    function restoreAllClientSideData() {
+        $(".clientSideOutput").each(function () {
+            $("#" + $(this).attr('id')).html(localStorage[$(this).attr('id')]);
+        });
+        $(".clientSideInput").each(function () {
+            $("#" + $(this).attr('id')).val(localStorage[$(this).attr('id')]);
+        });
+    }
+
     function replaceMainContent(url, template, pageInit) {
         var start = (new Date).getTime();
         $.getJSON(url, function (json) {
@@ -8,6 +17,13 @@
             var html = template(json);
             $(".main").html(html);
             pageInit();
+            restoreAllClientSideData();
+        });
+    }
+
+    function saveAllClientSideData() {
+        $(".clientSideInput").each(function () {
+            localStorage[$(this).attr('id')] = $(this).val();
         });
     }
 
@@ -21,7 +37,9 @@
             var template = Handlebars.compile(htmlTemplate);
 
             options.linkElement.click(function (event) {
+                saveAllClientSideData();
                 replaceMainContent(options.pageName + "/json.aspx", template, options.pageInit);
+
                 return false;
             });
         });

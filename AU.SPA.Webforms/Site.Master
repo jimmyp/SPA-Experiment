@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AU.SPA.Webforms.SiteMaster" %>
 
 <!DOCTYPE html>
-<html manifest="<%:ResolveClientUrl("~/manifest.appcache")%>">
+<html> <%--manifest="<%:ResolveClientUrl("~/manifest.appcache")%>">--%>
 <head runat="server">
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
