@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AU.SPA.Webforms.SiteMaster" %>
 
 <!DOCTYPE html>
-<html><%-- manifest="manifest.appcache">--%>
+<html manifest="<%:ResolveClientUrl("~/manifest.appcache")%>">
 <head runat="server">
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
@@ -47,8 +47,7 @@
         <ul id="perflist"></ul>
     </div>
     </form>
-    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery-1.4.1.min.js") %>"></script>
-    <%--<script type="text/javascript" src="<%: ResolveUrl("~/Scripts/zepto.min.js") %>"></script>--%>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/zepto.min.js") %>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/handlebars.js")%>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Navigation.js") %>"></script>
     <script type="text/javascript">
