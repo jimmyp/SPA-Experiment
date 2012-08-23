@@ -47,16 +47,17 @@
         <ul id="perflist"></ul>
     </div>
     </form>
-    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/zepto.min.js") %>"></script>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/zepto.js") %>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/handlebars.js")%>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Navigation.js") %>"></script>
     <script type="text/javascript">
 
         var navigation = new Navigation();
 
-//        window.addEventListener("popstate", function (e) {
-//            navigation.replaceMainContent(location.pathname);
-//        });
+        $(window).bind('popstate', function (e) {
+            if (e.state.html && e.state.pageName)
+                navigation.updateContent(e.state);
+        });
     </script>
     <asp:ContentPlaceHolder runat="server" ID="ScriptContent">
         

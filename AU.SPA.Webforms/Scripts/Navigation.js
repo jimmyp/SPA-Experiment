@@ -1,5 +1,7 @@
 ﻿var Navigation = (function () {
 
+    var pageInits = {};
+
     function restoreAllClientSideData() {
         $(".clientSideOutput").each(function () {
             $("#" + $(this).attr('id')).html(localStorage[$(this).attr('id')]);
@@ -9,15 +11,21 @@
         });
     }
 
-    function replaceMainContent(url, template, pageInit) {
+    function updateContent(state) {
+        $(".main").html(state.html);
+        pageInits[state.pageName]();
+        restoreAllClientSideData();
+    }
+
+    function replaceMainContent(url, template, pageName, historyUrl) {
         var start = (new Date).getTime();
         $.getJSON(url, function (json) {
             var diff = (new Date).getTime() - start;
             $("#perflist").append("<li>Loaded data " + url + " loaded in " + diff + "ms");
             var html = template(json);
-            $(".main").html(html);
-            pageInit();
-            restoreAllClientSideData();
+            var state = { html: html, pageName: pageName };
+            history.pushState(state, pageName, historyUrl);
+            updateContent(state);
         });
     }
 
@@ -30,17 +38,18 @@
     var setupClientSideNavigationBetween = function (options) {
         var start = (new Date).getTime();
         var contentUrl = "/" + options.pageName + "/" + options.pageName + "Content.html";
-        $.get(contentUrl, function (htmlTemplate) {
+        $.get(contentUrl, function (htmlTemplate, status) {
 
             var diff = (new Date).getTime() - start;
             $("#perflist").append("<li> Loaded html " + options.pageName + "Content.html" + "  in " + diff + "ms");
 
             var template = Handlebars.compile(htmlTemplate);
+            pageInits[options.pageName] = options.pageInit;
 
             options.linkElement.click(function (event) {
                 saveAllClientSideData();
-                replaceMainContent("/" + options.pageName + "/json.aspx", template, options.pageInit);
-                history.pushState(null, null, $(this).attr('href'));
+                replaceMainContent("/" + options.pageName + "/json.aspx", template, options.pageName, $(this).attr('href'));
+                $(this).unbind('click');
                 return false;
             });
         });
@@ -61,6 +70,6 @@
     return {
         setupClientSideNavigationBetween: setupClientSideNavigationBetween,
         loadContent: loadContent,
-        replaceMainContent: replaceMainContent
+        updateContent: updateContent
     };
 });

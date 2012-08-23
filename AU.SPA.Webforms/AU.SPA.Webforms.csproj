@@ -61,8 +61,18 @@
     <Content Include="Page2\Index.aspx" />
     <Content Include="Page2\Json.aspx" />
     <Content Include="Page2\Page2Content.html" />
+    <Content Include="Scripts\default.js" />
     <Content Include="Scripts\handlebars.js" />
     <Content Include="Scripts\handlebars.runtime.js" />
+    <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine-html.js" />
+    <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine.css" />
+    <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine.js" />
+    <Content Include="Scripts\Specs\SpecRunner.html" />
+    <Content Include="Scripts\Specs\spec\DefaultSpec.js" />
+    <Content Include="Scripts\Specs\spec\PlayerSpec.js" />
+    <Content Include="Scripts\Specs\spec\SpecHelper.js" />
+    <Content Include="Scripts\Specs\src\Player.js" />
+    <Content Include="Scripts\Specs\src\Song.js" />
     <Content Include="Scripts\zepto.min.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -131,6 +141,13 @@
     <Compile Include="Page1\Json.aspx.designer.cs">
       <DependentUpon>Json.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page2\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page2\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page2\Json.aspx.cs">
       <DependentUpon>Json.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,6 +157,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Scripts\Navigation.js" />
+    <Content Include="Scripts\Specs\spec\NavigationSpec.js" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +179,7 @@
     <Content Include="packages.config" />
     <Content Include="Page1\Page1Content.html" />
     <Content Include="manifest.appcache" />
+    <None Include="Scripts\Specs\lib\jasmine-1.2.0\MIT.LICENSE" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AU.SPA.MC\AU.SPA.MC.csproj">
