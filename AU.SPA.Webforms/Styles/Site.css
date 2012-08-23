@@ -88,7 +88,6 @@ first child of the left and right table columns */
 
 .page
 {
-    width: 960px;
     background-color: #fff;
     margin: 20px auto 0px auto;
     border: 1px solid #496077;
@@ -221,13 +220,13 @@ legend
 
 input.textEntry 
 {
-    width: 320px;
+    width: 30%;
     border: 1px solid #ccc;
 }
 
 input.passwordEntry 
 {
-    width: 320px;
+    width: 30%;
     border: 1px solid #ccc;
 }
 
