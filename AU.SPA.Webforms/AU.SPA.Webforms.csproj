@@ -73,6 +73,7 @@
     <Content Include="Scripts\Specs\spec\SpecHelper.js" />
     <Content Include="Scripts\Specs\src\Player.js" />
     <Content Include="Scripts\Specs\src\Song.js" />
+    <Content Include="Scripts\zepto.js" />
     <Content Include="Scripts\zepto.min.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
