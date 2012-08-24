@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-# 2010-06-18:v56
+# 2010-06-18:v57
 
 # Explicitly cached 'master entries'.
 CACHE:
@@ -7,6 +7,9 @@ Page1/Page1Content.html
 Page2/Page2Content.html
 Styles/Site.css
 Scripts/handlebars.js
+Scripts/zepto.min.js
+Scripts/zepto.js
+Scripts/default.js
 Scripts/zepto.min.js
 Scripts/Navigation.js
 Page1/json.aspx
