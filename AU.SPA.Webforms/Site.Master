@@ -7,6 +7,7 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/basic.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -49,17 +50,18 @@
         <ul id="perflist"></ul>
     </div>
     </form>
-    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/zepto.js") %>"></script>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery-1.4.1.js") %>"></script>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery.simplemodal-1.4.2.js") %>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/handlebars.js")%>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Navigation.js") %>"></script>
     <script type="text/javascript">
 
         var navigation = new Navigation();
 
-        $(window).bind('popstate', function (e) {
-            if (e.state.html && e.state.pageName)
-                navigation.updateContent(e.state);
-        });
+//        $(window).bind('popstate', function (e) {
+//            if (e.state.html && e.state.pageName)
+//                navigation.updateContent(e.state);
+//        });
     </script>
     <asp:ContentPlaceHolder runat="server" ID="ScriptContent">
         

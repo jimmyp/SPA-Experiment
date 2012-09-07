@@ -56,6 +56,8 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="img\basic\x.png" />
+    <Content Include="img\modalClose.png" />
     <Content Include="Page1\Index.aspx" />
     <Content Include="Page1\Json.aspx" />
     <Content Include="Page2\Index.aspx" />
@@ -64,6 +66,7 @@
     <Content Include="Scripts\default.js" />
     <Content Include="Scripts\handlebars.js" />
     <Content Include="Scripts\handlebars.runtime.js" />
+    <Content Include="Scripts\jquery.simplemodal-1.4.2.js" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine-html.js" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine.css" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine.js" />
@@ -75,6 +78,8 @@
     <Content Include="Scripts\Specs\src\Song.js" />
     <Content Include="Scripts\zepto.js" />
     <Content Include="Scripts\zepto.min.js" />
+    <Content Include="Styles\basic.css" />
+    <Content Include="Styles\basic_ie.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
