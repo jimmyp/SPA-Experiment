@@ -69,6 +69,7 @@
     <Content Include="Scripts\handlebars.runtime.js" />
     <Content Include="Scripts\jquery.scrollTo-1.4.3.1.js" />
     <Content Include="Scripts\jquery.simplemodal-1.4.2.js" />
+    <Content Include="Scripts\myScript.js" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine-html.js" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine.css" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine.js" />
@@ -134,6 +135,7 @@
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
