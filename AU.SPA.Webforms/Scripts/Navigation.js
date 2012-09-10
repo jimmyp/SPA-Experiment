@@ -3,11 +3,12 @@
     var pageInits = {};
 
     function restoreAllClientSideData() {
-        $(".clientSideOutput").each(function () {
-            $("#" + $(this).attr('id')).html(localStorage[$(this).attr('id')]);
-        });
-        $(".clientSideInput").each(function () {
-            $("#" + $(this).attr('id')).val(localStorage[$(this).attr('id')]);
+
+        $(".clientSideOutput").each(function() {
+            var from = $(this).attr('from');
+            if (from) {
+                $(this).val(localStorage[from]);
+            }
         });
     }
 
@@ -29,9 +30,13 @@
         });
     }
 
-    function saveAllClientSideData() {
+    function saveAllClientSideData(pageName) {
         $(".clientSideInput").each(function () {
             localStorage[$(this).attr('id')] = $(this).val();
+        });
+
+        $('.clientSideInput').each(function () {
+            localStorage.setItem(pageName + "." + $(this).attr("Id"), $(this).val());
         });
     }
 
@@ -46,8 +51,10 @@
             var template = Handlebars.compile(htmlTemplate);
             pageInits[options.pageName] = options.pageInit;
 
+
+
             options.linkElement.click(function (event) {
-                saveAllClientSideData();
+                saveAllClientSideData(options.pageName);
                 replaceMainContent("/" + options.pageName + "/json.aspx", template, options.pageName, $(this).attr('href'));
                 $(this).unbind('click');
                 return false;
