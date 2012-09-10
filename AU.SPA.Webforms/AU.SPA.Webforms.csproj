@@ -66,6 +66,7 @@
     <Content Include="Scripts\default.js" />
     <Content Include="Scripts\handlebars.js" />
     <Content Include="Scripts\handlebars.runtime.js" />
+    <Content Include="Scripts\jquery.scrollTo-1.4.3.1.js" />
     <Content Include="Scripts\jquery.simplemodal-1.4.2.js" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine-html.js" />
     <Content Include="Scripts\Specs\lib\jasmine-1.2.0\jasmine.css" />

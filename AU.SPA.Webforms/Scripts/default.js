@@ -1,8 +1,9 @@
 ﻿function initialisePage(navigation) {
     
     var home = {};
-    
+
     var page2 = function () {
+        $("#backToTop").scrollTo("#html");
         navigation.setupClientSideNavigationBetween({ linkElement: $("#prev"), pageName: "Page1", pageInit: page1 });
     };
 

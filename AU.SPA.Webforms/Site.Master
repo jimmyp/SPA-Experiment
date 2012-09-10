@@ -54,6 +54,7 @@
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery.simplemodal-1.4.2.js") %>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/handlebars.js")%>"></script>
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Navigation.js") %>"></script>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery.scrollTo-1.4.3.1.js") %>"></script>
     <script type="text/javascript">
 
         var navigation = new Navigation();
