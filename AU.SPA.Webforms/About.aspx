@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="About Us" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="About.aspx.cs" Inherits="AU.SPA.Webforms.About" %>
+    CodeFile="About.aspx.cs" Inherits="About" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
@@ -7,7 +7,24 @@
     <h2>
         About
     </h2>
-    <p>
-        Put content here.
+    <p id="content">
     </p>
+    
+    <script type="text/javascript" src="Scripts/jquery-1.4.1.js"></script>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var bName = sessionStorage.buttonname;
+            var cCount = sessionStorage.clickcount;
+            var lSess = localStorage.lastsession;
+
+            var st = "you clicked " + bName + " to get to this page.<br/>You have clicked " + cCount + " times. Last click was at " + lSess + ".";
+
+            $("#content").text(st);
+        });
+
+    </script>
+
 </asp:Content>
